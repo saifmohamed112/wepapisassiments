@@ -36,7 +36,7 @@ namespace wepapisassiment.Repo
             _context.Directors.Remove(dir);
             _context.SaveChanges();
         }
-
+        //saof
         public void Update(int Id, DirectorsUpdateDto directorMovieDto)
         {
            var dir = _context.Directors.Include(x=>x.Nationalty).Include(x=>x.Movies).ThenInclude(x=>x.Catigory).FirstOrDefault(x=>x.ID == Id);
